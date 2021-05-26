@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "744712402708",
+    "project_id": "reservaai2021",
+    "storage_bucket": "reservaai2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744712402708:android:52618952e673644218f401",
+        "android_client_info": {
+          "package_name": "com.imklesley.reservaai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744712402708-m9euh1tklqinpfqcdgt9244hi56ib59h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.imklesley.reservaai",
+            "certificate_hash": "25c1ac9ab47aad66a7342b998aeac534880219eb"
+          }
+        },
+        {
+          "client_id": "744712402708-cc03a7nigdniqp2iq0a3et7olhmhblrj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZrk5c4ryHzGQLuaFUvDCMT20Tpnw30QI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744712402708-cc03a7nigdniqp2iq0a3et7olhmhblrj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

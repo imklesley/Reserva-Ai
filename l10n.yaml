@@ -1,0 +1,9 @@
+#Local dos arquivos com as traduções
+arb-dir: lib/config/translations/
+# Arquivo template(base) com as chaves e traduções
+template-arb-file: app_en.arb
+#Arquivo com a classe gerada para as traduções
+output-localization-file: app_localizations.dart
+
+#Arquivo contém quais mensagens não foram traduzidas pra uma determinada locale
+untranslated-messages-file: unTranslatedMessages.txt

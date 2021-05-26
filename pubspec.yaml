@@ -1,0 +1,134 @@
+name: reservaai
+description: Aplicação que permite realizar reservas em qualquer categoria de estabelecimentos cadastrados.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.13.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  #Internacionalização
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
+
+  #Localização
+  geolocator: ^7.0.3
+#  geocode: ^1.0.1
+
+
+  #MobX
+  flutter_mobx: ^2.0.0
+  mobx: ^2.0.1
+  provider: ^5.0.0
+
+  #Firebase
+  firebase_core: ^1.1.0
+  firebase_auth: ^1.1.3
+  cloud_firestore: ^2.0.0
+  firebase_storage: ^8.0.5
+  firebase_analytics: ^8.0.3
+
+  #Estrutura e apresentação de widgets e images
+  flutter_staggered_grid_view: ^0.4.0
+  transparent_image: ^2.0.0
+  flutter_blurhash: ^0.6.0
+  image_picker: ^0.7.5+2
+
+  #Icons
+  cupertino_icons: ^1.0.2
+  font_awesome_flutter: ^9.0.0
+
+  #svgs
+  flutter_svg: ^0.22.0
+
+  #Dados Localmente
+  shared_preferences: ^2.0.5
+
+  #Rotas
+  fluro: ^2.0.3
+
+
+  #Auth
+  google_sign_in: ^5.0.3
+  flutter_facebook_auth: ^3.4.0
+  twitter_login: ^3.0.8
+
+
+
+  #Fontes
+  google_fonts: ^2.1.0
+
+  #Formatters and Validators
+  brasil_fields: ^1.1.2
+  cpf_cnpj_validator: ^2.0.0
+  validators: ^3.0.0
+
+  #Uteis
+  flutter_switch: ^0.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  #MobX
+  build_runner: ^2.0.2
+  mobx_codegen: ^2.0.1+3
+
+  # Effective Dart Rules
+  lint: ^1.5.3
+
+
+flutter:
+  #Usado para gerar arquivos de tradução
+  generate: true
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+     - assets/images/logo/
+     - assets/images/context/
+     - assets/images/icons/
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+#  fonts:
+#     - family: Montserrat
+#       fonts:
+#         - asset: assets/fonts/Montserrat/Montserrat-Thin.ttf
+#           weight: 100
+#         - asset: assets/fonts/Montserrat/Montserrat-Regular.ttf
+#           weight: 400
+#         - asset: assets/fonts/Montserrat/Montserrat-SemiBold.ttf
+#           weight: 600
+#         - asset: assets/fonts/Montserrat/Montserrat-SemiBoldItalic.ttf
+#           weight: 600
+#           style: italic
+#         - asset: assets/fonts/Montserrat/Montserrat-Bold.ttf
+#           weight: 700
+#         - asset: assets/fonts/Montserrat/Montserrat-ExtraBold.ttf
+#           weight: 800
+#         - asset: assets/fonts/Montserrat/Montserrat-Black.ttf
+#           weight: 900
+
+
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
+

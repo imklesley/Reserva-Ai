@@ -1,0 +1,7 @@
+include: package:lint/analysis_options.yaml
+
+linter:
+  rules:
+  # Caso apareça alguma marcação que incomode, basta coloca-la aqui e colocar false
+    sort_pub_dependencies: false
+

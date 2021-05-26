@@ -1,0 +1,168 @@
+{
+  "language": "English",
+  "@language": {
+    "description": "The current language."
+  },
+  "theme": "Theme",
+  "@theme": {
+    "description": "Set of colors that define the appearance of something."
+  },
+  "welcomeBack": "Welcome back!",
+  "@welcomeBack": {
+    "description": "Welcome to the user in the login page."
+  },
+  "email": "Email",
+  "@email": {
+    "description": "Name email on auth pages."
+  },
+  "enterEmail": "Enter your email address!",
+  "@enterEmail": {
+    "description": "Tells the user to insert an email."
+  },
+  "invalidEmail": "This e-mail is not valid!",
+  "@invalidEmail": {
+    "description": "Tells the user that the email is invalid."
+  },
+  "password": "Password",
+  "@password": {
+    "description": "Name password on auth pages."
+  },
+  "enterPassword": "Enter your password!",
+  "@enterPassword": {
+    "description": "Tells the user to insert a password."
+  },
+  "signIn": "Sign In",
+  "@signIn": {
+    "description": "Tells the user where to touch/click to sign in an account."
+  },
+  "signUp": "Sign Up",
+  "@signUp": {
+    "description": "Tells the user where to touch/click to sign up."
+  },
+  "or": "Or",
+  "@or": {
+    "description": "One thing 'or' another,"
+  },
+  "signInWithGoogle": "Sign In With Google",
+  "@signInWithGoogle": {
+    "description": "Show user what is the button with the logo of Google in login page."
+  },
+  "signInWithFacebook": "Sign In With Facebook",
+  "@signInWithFacebook": {
+    "description": "Show user what is the button with the logo of Facebook in login page."
+  },
+  "signInWithTwitter": "Sign In With Facebook",
+  "@signInWithTwitter": {
+    "description": "Show user what is the button with the logo of Facebook in login page."
+  },
+  "onSuccessLogin": "Login successfully!",
+  "@onSuccessLogin": {
+    "description": "User Logged in successfully!"
+  },
+  "onFailLogin": "Incorrect username or password!",
+  "@onFailLogin": {
+    "description": "login attempt error."
+  },
+  "forgotPassword": "Forgot Password?",
+  "@forgotPassword": {
+    "description": "Asks the user forgot the password?"
+  },
+  "back": "Back",
+  "@back": {
+    "description": "Back to another page."
+  },
+  "letUsHelpYou": "Let us help you!",
+  "@letUsHelpYou": {
+    "description": "Telling to the user that we will help"
+  },
+  "recoveryLinkHasBeenSent": "A recovery link has been sent to the email provided!",
+  "@recoveryLinkHasBeenSent": {
+    "description": "Message when its send a recover link to the user"
+  },
+  "recoverPassword": "Recover Password",
+  "@recoverPassword": {
+    "description": "Text of the button to recover a password"
+  },
+  "helloWelcome": "Hello!\nWelcome",
+  "@helloWelcome": {
+    "description": "Said Hello to the user in the welcome page"
+  },
+  "reservaaiSlogan": "Here you make a reservation on your\nfavorite place and easily!",
+  "@reservaaiSlogan": {
+    "description": "Slogan of Reserva Aí!"
+  },
+  "alreadyRegistered": "Already Registered ?",
+  "@alreadyRegistered": {
+    "description": "Ask the user if Already Registered on reserva ai"
+  },
+  "previous": "Previous",
+  "@previous": {
+    "description": "Button to come back to another part of the register form"
+  },
+  "next": "Next",
+  "@next": {
+    "description": "Tells the user to continue in another page."
+  },
+  "fillTheFields": "Fill in the fields below!",
+  "@fillTheFields": {
+    "description": "Tells the user to fill the fields on regfister page"
+  },
+  "fullName": "Full name",
+  "@fullName": {
+    "description": "Full name field."
+  },
+  "enterFullName": "Enter your full name!",
+  "@enterFullName": {
+    "description": "tells the user to put the full name in the field"
+  },
+  "cpf": "CPF",
+  "@cpf": {
+    "description": "Ask for user id"
+  },
+  "enterCpf": "Enter your CPF!",
+  "@enterCpf": {
+    "description": "Ask for user id"
+  },
+  "invalidCpf": "Invalid CPF !",
+  "@invalidCpf": {
+    "description": "Tells user that the id is wrong"
+  },
+  "birthDate": "Birth Date",
+  "@birthDate": {
+    "description": "Ask for birth date of the user"
+  },
+
+  "enterBirthDate": "Enter your birth date!",
+  "@enterBirthDate": {
+    "description": "Tells the user to insert a birth date"
+  },
+  "invalidBirthDate": "Invalid birth date!",
+  "@invalidBirthDate": {
+    "description": "Tells the user that the birth date was added wrong."
+  },
+
+
+  "phone": "Phone",
+  "@phoneNumber": {
+    "description": "Tells the user where it is the phone number field."
+  },
+
+
+  "enterPhoneNumber": "Enter your phone number!",
+  "@enterPhoneNumber": {
+    "description": "Tells the user to add a phone number"
+  },
+
+  "invalidPhoneNumber": "Phone number is invalid!",
+  "@invalidPhoneNumber": {
+    "description": "Tells the user to add a phone number"
+  },
+
+  "bookingNotificationsUsingWhatsapp": "Notifications using\nthe whatsapp?",
+  "@bookingNotificationsUsingWhatsapp": {
+    "description": "Ask the user if reserva ai! can send notifications about reservations made."
+  }
+
+
+
+}
