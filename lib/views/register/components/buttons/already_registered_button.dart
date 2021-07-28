@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:reservaai/config/themes/app_colors.dart';
 import 'package:reservaai/views/_shared/responsive_layout.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 

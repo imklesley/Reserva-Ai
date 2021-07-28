@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
-import 'package:reservaai/controllers/stores/app_config_store.dart';
-import 'package:reservaai/controllers/stores/auth_store.dart';
-import 'package:reservaai/controllers/stores/theme_store.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '/controllers/stores/app_config_store.dart';
+import '/controllers/stores/auth_store.dart';
+import '/controllers/stores/theme_store.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -15,18 +16,7 @@ class HomeView extends StatelessWidget {
     final theme = Provider.of<AppConfigStore>(context).themeStore;
     final auth = Provider.of<AuthStore>(context);
 
-
-
-
-
-
     final appLocalizations = AppLocalizations.of(context);
-
-
-
-
-
-
 
     return Scaffold(
         appBar: AppBar(

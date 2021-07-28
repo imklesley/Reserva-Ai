@@ -15,6 +15,7 @@ import 'config/translations/l10n.dart';
 import 'controllers/stores/app_config_store.dart';
 import 'controllers/stores/auth_store.dart';
 
+
 Future<void>  main() async {
 
 
@@ -35,8 +36,6 @@ Future<void>  main() async {
       version: "v9.0",
     );
   }
-
-
 
 
   //Inicializa o router

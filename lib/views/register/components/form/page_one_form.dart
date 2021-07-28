@@ -1,36 +1,31 @@
-  import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:geolocator/geolocator.dart';
-
 import 'package:provider/provider.dart';
-import 'package:reservaai/config/themes/app_colors.dart';
-import 'package:reservaai/config/themes/app_sizes.dart';
-import 'package:reservaai/controllers/stores/register_store.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:reservaai/views/_shared/buttons/login_with_facebook_button.dart';
-import 'package:reservaai/views/_shared/buttons/login_with_google_button.dart';
-import 'package:reservaai/views/_shared/buttons/login_with_twitter_button.dart';
-import 'package:reservaai/views/_shared/responsive_layout.dart';
-import 'package:reservaai/views/register/components/buttons/already_registered_button.dart';
 import 'package:validators/validators.dart';
+
+import '/config/themes/app_colors.dart';
+import '/config/themes/app_sizes.dart';
+import '/controllers/stores/register_store.dart';
+import '/views/_shared/buttons/login_with_facebook_button.dart';
+import '/views/_shared/buttons/login_with_google_button.dart';
+import '/views/_shared/responsive_layout.dart';
+import '/views/register/components/buttons/already_registered_button.dart';
 
 class PageOneForm extends StatelessWidget {
   final Image logoReservaAi;
   final PageController pageController;
   final Size size;
 
-  const PageOneForm({Key? key,
-    required this.logoReservaAi,
-    required this.pageController,
-    required this.size})
+  const PageOneForm(
+      {Key? key,
+      required this.logoReservaAi,
+      required this.pageController,
+      required this.size})
       : super(key: key);
-
-
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +37,6 @@ class PageOneForm extends StatelessWidget {
     final bool isTablet = ResponsiveLayout.isTablet(context);
 
     final register = Provider.of<RegisterStore>(context);
-
 
     Future<Position> _getPosition() async {
       bool serviceEnabled;
@@ -72,19 +66,15 @@ class PageOneForm extends StatelessWidget {
       }
 
       //Caso dê tudo certo, podemos pegar à posição do usuário em coodenadas
-      return await Geolocator.getCurrentPosition();
+      return Geolocator.getCurrentPosition();
     }
 
     // TODO: Tratar os devidos erros caso o usuário decida n liberar a localização
     _getPosition().then((Position coords) {
-      print(coords);
+      debugPrint(coords.toString());
       //insere às coods
       register.setLocation(GeoPoint(coords.latitude, coords.latitude));
-
-
-
     });
-
 
     return FittedBox(
       fit: BoxFit.fitHeight,
@@ -92,20 +82,20 @@ class PageOneForm extends StatelessWidget {
           height: isMobile
               ? 538
               : isTablet
-              ? 600
-              : 650,
+                  ? 600
+                  : 650,
           width: isMobile
               ? 360
               : isTablet
-              ? 530
-              : 600,
+                  ? 530
+                  : 600,
           decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.all(
                   Radius.circular(AppSizes.defaultRadiusContainer))),
           child: Padding(
             padding:
-            const EdgeInsets.only(top: 20, left: 5, right: 5, bottom: 5),
+                const EdgeInsets.only(top: 20, left: 5, right: 5, bottom: 5),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -136,7 +126,7 @@ class PageOneForm extends StatelessWidget {
                                 width: 36,
                                 height: 36,
                                 padding:
-                                const EdgeInsets.only(right: 10, top: 10),
+                                    const EdgeInsets.only(right: 10, top: 10),
                                 child: const FaIcon(FontAwesomeIcons.mailBulk,
                                     color: AppColors.primaryColor),
                               ),
@@ -235,7 +225,7 @@ class PageOneForm extends StatelessWidget {
                                 if (_formKeyPageOne.currentState!.validate()) {
                                   pageController.nextPage(
                                       duration:
-                                      const Duration(milliseconds: 200),
+                                          const Duration(milliseconds: 200),
                                       curve: Curves.easeIn);
                                   FocusScope.of(context).unfocus();
                                 }
@@ -249,23 +239,29 @@ class PageOneForm extends StatelessWidget {
                         ),
                         Column(
                           children: [
-                            Text(
-                              _appLocalizations.or,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.grey[400], fontSize: 20),
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 10.0),
+                              child: Text(
+                                _appLocalizations.or,
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.grey[400], fontSize: 20),
+                              ),
                             ),
                             SizedBox(
                               width: 250,
                               height: 60,
                               child: Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceEvenly,
-                                children:  [
-                                  LoginWithGoogleButton(formContext: context,),
-                                  LoginWithFacebookButton(formContext: context,),
-                                  LoginWithTwitterButton(formContext: context,),
-
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  LoginWithGoogleButton(
+                                    formContext: context,
+                                  ),
+                                  LoginWithFacebookButton(
+                                    formContext: context,
+                                  ),
+                                  // LoginWithTwitterButton(formContext: context,),
                                 ],
                               ),
                             ),

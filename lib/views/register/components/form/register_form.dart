@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:provider/provider.dart';
 import 'package:reservaai/controllers/stores/register_store.dart';
 import 'package:reservaai/views/_shared/responsive_layout.dart';

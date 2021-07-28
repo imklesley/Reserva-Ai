@@ -53,8 +53,6 @@ class AuthenticationRepository {
   //GOOGLE
 
   Future<String> signInSignUpWithGoogle() async {
-    //Para não ter que ficar fazendo signIn o tempo toodo com o Google é guardado o user em cache, log verifica-se se o usuário já existe
-
     if (kIsWeb) {
       //Isso serve para fazer o pop-up que irá no google fazer o login, ao invés de tentar login direto como no mobile
       final GoogleAuthProvider _authProvider = GoogleAuthProvider();
@@ -101,7 +99,7 @@ class AuthenticationRepository {
     }
   }
 
-//FACEBOOK
+  //FACEBOOK
 
   Future<String> signInSignUpWithFacebook() async {
     //Inicia processo de login no facebook
@@ -133,16 +131,14 @@ class AuthenticationRepository {
     }
   }
 
-//TWITTER
-
+  //TWITTER
   Future<String> signInSignUpWithTwitter() async {
     if (kIsWeb) {
-      //Isso serve para fazer o pop-up que irá no google fazer o login, ao invés de tentar login direto como no mobile
       final TwitterAuthProvider _authProvider = TwitterAuthProvider();
-
       try {
         final UserCredential userCredential =
             await _auth.signInWithPopup(_authProvider);
+        print(userCredential.user!.email);
         return successCode;
       } on FirebaseAuthException catch (error) {
         //TODO: tratar erros
@@ -150,11 +146,11 @@ class AuthenticationRepository {
         return error.code;
       }
     } else {
-      //TODO: Inserir após ter a conta de dev do twitter
+      // TODO: Inserir após ter a conta de dev do twitter
       final twitterLogin = TwitterLogin(
-        redirectURI: 'https://reservaai2021.firebaseapp.com/__/auth/handler',
-        apiKey: '<your consumer key>',
-        apiSecretKey: '<your consumer secret>',
+        redirectURI: 'example://',
+        apiKey: 'Lk0Sn0ZYLWooyhHa9U2HOsD41',
+        apiSecretKey: 'u4j82Xiw5OmGpbH1EVkiL1Qju3rTjR93O4iHvzLZnaP69hGqZO',
       );
 
       //Inicia o processo de
@@ -167,6 +163,7 @@ class AuthenticationRepository {
             accessToken: result.authToken!,
             secret: result.authTokenSecret!,
           );
+
           // Once signed in, return the UserCredential
           await _auth.signInWithCredential(twitterAuthCredential);
           return successCode;

@@ -9,7 +9,6 @@ import 'package:reservaai/controllers/stores/auth_store.dart';
 import 'package:reservaai/controllers/stores/login_store.dart';
 import 'package:reservaai/views/_shared/buttons/login_with_facebook_button.dart';
 import 'package:reservaai/views/_shared/buttons/login_with_google_button.dart';
-import 'package:reservaai/views/_shared/buttons/login_with_twitter_button.dart';
 import 'package:reservaai/views/_shared/responsive_layout.dart';
 import 'package:reservaai/views/login/components/buttons/forgot_password_button.dart';
 import 'package:validators/validators.dart';
@@ -69,8 +68,9 @@ class LoginForm extends StatelessWidget {
         msg = 'O email informado não está cadastrado!';
       } else if (codeError == 'wrong-password') {
         msg = 'Senha Inválida! Tente Novamente!';
-      }else if (codeError == 'too-many-requests') {
-        msg = 'Muitas tentativas falhas! Aguarde alguns instantes e tente novamente.';
+      } else if (codeError == 'too-many-requests') {
+        msg =
+            'Muitas tentativas falhas! Aguarde alguns instantes e tente novamente.';
       } else {
         msg = 'A operação falhou. Tente mais tarde!';
       }
@@ -97,8 +97,6 @@ class LoginForm extends StatelessWidget {
 
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
     }
-
-
 
     void onSuccessGoogle(String userFirstName) {
       //TODO: Translations
@@ -137,8 +135,8 @@ class LoginForm extends StatelessWidget {
         msg = 'Esta conta já existe!';
       } else if (codeError == 'invalid-credential') {
         msg = 'Credenciais Inválidas!';
-      }else{
-        msg =  'ADICIONAR ERRO "$codeError" À LISTA';
+      } else {
+        msg = 'ADICIONAR ERRO "$codeError" À LISTA';
       }
 
       //Exibição de snackbar com a mensagem
@@ -163,15 +161,6 @@ class LoginForm extends StatelessWidget {
 
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
     }
-
-
-
-
-
-
-
-
-
 
     return FittedBox(
       fit: BoxFit.fitHeight,
@@ -216,7 +205,8 @@ class LoginForm extends StatelessWidget {
                         Text(
                           appLocalizations!.welcomeBack,
                           textAlign: TextAlign.center,
-                          style: const TextStyle(color: Colors.grey, fontSize: 15),
+                          style:
+                              const TextStyle(color: Colors.grey, fontSize: 15),
                         ),
                       ],
                     ),
@@ -357,11 +347,14 @@ class LoginForm extends StatelessWidget {
                             ),
                             Column(
                               children: [
-                                Text(
-                                  appLocalizations.or,
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      color: Colors.grey[400], fontSize: 20),
+                                Padding(
+                                  padding: const EdgeInsets.only(bottom: 10.0),
+                                  child: Text(
+                                    appLocalizations.or,
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Colors.grey[400], fontSize: 20),
+                                  ),
                                 ),
                                 SizedBox(
                                   width: 250,
@@ -370,9 +363,13 @@ class LoginForm extends StatelessWidget {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      LoginWithGoogleButton(formContext: context,),
-                                      LoginWithFacebookButton(formContext: context,),
-                                      LoginWithTwitterButton(formContext: context,),
+                                      LoginWithGoogleButton(
+                                        formContext: context,
+                                      ),
+                                      LoginWithFacebookButton(
+                                        formContext: context,
+                                      ),
+                                      // LoginWithTwitterButton(formContext: context,),
                                     ],
                                   ),
                                 ),

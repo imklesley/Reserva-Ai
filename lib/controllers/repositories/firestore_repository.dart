@@ -35,7 +35,7 @@ class FirestoreRepository {
     return UserModel.fromJson(userData);
   }
 
-  Future<void> updateLastAccess(String uid) async {
+  Future<void> updateUserLastAccess(String uid) async {
     final dataToUpdate = <String, dynamic>{};
     dataToUpdate['last_access'] = Timestamp.now();
     await _firestore

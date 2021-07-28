@@ -40,7 +40,7 @@ class LoginDesktopBody extends StatelessWidget {
         Container(
             color: AppColors.acentColor,
             width: _size.width / 2,
-            height: _size.height,
+            height: _size.height+_size.height*0.09,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

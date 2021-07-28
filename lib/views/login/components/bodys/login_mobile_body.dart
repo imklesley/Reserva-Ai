@@ -19,7 +19,7 @@ class LoginMobileBody extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding:  EdgeInsets.only(top:_size.height>=700?80:0),
+              padding:  EdgeInsets.only(top:_size.height>=700?80:0,bottom: 30),
               child: const LoginForm(),
             ),
             if (_size.height >= 700) const ForgotPasswordButton() else Container()

@@ -1,6 +1,7 @@
 import 'dart:typed_data';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 
 import 'package:mobx/mobx.dart';
 import 'package:reservaai/controllers/repositories/authentication_repository.dart';
@@ -144,6 +145,8 @@ abstract class _AuthStore with Store {
       //isDocUserExists para true
       await _getUserData();
 
+
+
       //Se doc de dados do user n existe, logo cria-se e salva-se um.
       if(!_firestoreRepository.isDocUserExists){
         final Map<String,dynamic> data = {
@@ -247,7 +250,17 @@ abstract class _AuthStore with Store {
 
       //Caso o user tenha um doc já recupera -- caso doc exista já muda o
       //isDocUserExists para true
+
+
+      print(user!.photoURL);
+      print(user!.displayName);
+      print(user!.email);
+
       await _getUserData();
+
+
+
+
 
       //Se doc de dados do user n existe, logo cria-se e salva-se um.
       if(!_firestoreRepository.isDocUserExists){
@@ -255,7 +268,6 @@ abstract class _AuthStore with Store {
         final Map<String,dynamic> data = {
           'account_created': Timestamp.now(),
           'birth_date': null,
-          //TODO: Auth-Providers não retornam o phoneNumer por alguma razão
           'contact': null,
           'cpf': null,
           'email': user!.email,
@@ -274,6 +286,7 @@ abstract class _AuthStore with Store {
       }
       // print('dados: $userData');
       //Nome do user é enviado para view como saudações
+
       onSuccess(userData!.name.split(' ').first);
       isLoading = false;
     } else {

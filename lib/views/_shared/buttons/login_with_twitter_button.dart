@@ -57,7 +57,13 @@ class LoginWithTwitterButton extends StatelessWidget {
         msg = 'Você cancelou o login. Tente Novamente!';
       }else if (codeError == 'failed') {
         msg = 'O login falhou!. Tente Novamente!';
-      }else if (codeError == 'server-error') {
+      }
+
+      else if(codeError == 'popup-closed-by-user') {
+        msg = 'Você cancelou o login. Tente Novamente!';
+      }
+
+      else if (codeError == 'server-error') {
         msg = 'Error! Tente novamente em alguns instantes!';
       } else{
         //Caso ocorra algum erro n previsto

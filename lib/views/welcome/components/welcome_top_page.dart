@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reservaai/config/themes/app_colors.dart';
 import 'package:reservaai/config/themes/app_sizes.dart';
+import 'package:reservaai/views/_shared/adaptive_text.dart';
 import 'package:reservaai/views/_shared/buttons/back_page_button.dart';
 import 'package:reservaai/views/_shared/responsive_layout.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -33,7 +34,8 @@ class WelcomeTopPage extends StatelessWidget {
                           Radius.circular(AppSizes.defaultRadiusContainer)),
                   child: Image.asset(
                     'assets/images/context/restaurant_welcome_page.jpg',
-                    semanticLabel: 'Pessoas em um restaurante como background',
+                    semanticLabel:
+                        'Pessoas em um restaurante como plano de fundo',
                     fit: BoxFit.cover,
                     height: size.height,
                   )))
@@ -80,37 +82,36 @@ class WelcomeTopPage extends StatelessWidget {
                               const RichTextLogo(),
                               Padding(
                                 padding: EdgeInsets.only(
-                                  top: !(isMobile || isTablet) ? 200 : 45,
+                                  top: !(isMobile || isTablet) ? 100 : 45,
                                   bottom: !(isMobile || isTablet) ? 100 : 45,
                                 ),
                                 child: FittedBox(
-                                  fit: BoxFit.fitWidth,
-                                  child: Text(appLocalizations!.helloWelcome,
+                                    fit: BoxFit.fitWidth,
+                                    child: AdaptiveText(
+                                      text: appLocalizations!.helloWelcome,
                                       style: TextStyle(
-
                                           fontSize: isMobile
                                               ? 45
                                               : isTablet
                                                   ? 65
                                                   : 75,
                                           color: Colors.white,
-                                          fontWeight: FontWeight.w900)),
-                                ),
+                                          fontWeight: FontWeight.w900),
+                                    )),
                               ),
                               FittedBox(
-                                fit: BoxFit.fitWidth,
-                                child: Text(
-                                  appLocalizations.reservaaiSlogan,
-                                  style: TextStyle(
-                                      fontSize: isMobile
-                                          ? 20
-                                          : isTablet
-                                              ? 20
-                                              : 35,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ),
+                                  fit: BoxFit.fitWidth,
+                                  child: AdaptiveText(
+                                    text: appLocalizations.reservaaiSlogan,
+                                    style: TextStyle(
+                                        fontSize: isMobile
+                                            ? 20
+                                            : isTablet
+                                                ? 20
+                                                : 35,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w500),
+                                  )),
                             ],
                           )),
                     ],

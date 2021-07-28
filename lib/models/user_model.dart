@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:reservaai/models/contact_model.dart';
 
 class UserModel {
@@ -7,7 +6,7 @@ class UserModel {
   late Timestamp? birthDate;
   late ContactModel? contact;
   late String? cpf;
-  late String email;
+  late String? email;
   late String? gender;
   late Timestamp lastAccess;
   late GeoPoint? location;
@@ -35,7 +34,7 @@ class UserModel {
       contact = ContactModel.fromJson(json['contact'] as Map<String, dynamic>);
     }
     cpf = json['cpf'] == null ? null : json['cpf'] as String;
-    email = json['email'] as String;
+    email = json['email'] == null ? null : json['email'] as String;
     gender = json['gender'] == null ? null:json['gender'] as String;
     lastAccess = json['last_access'] as Timestamp;
     location = json['location'] == null ? null : json['location'] as GeoPoint;
