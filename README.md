@@ -10,9 +10,8 @@ Reserva Aí! is a mobile application that allows users to make reservations for 
   <img width="305" alt="Captura de tela 2023-03-02 185735" src="https://user-images.githubusercontent.com/26011999/222567881-3b3987d4-8402-4eea-9573-7d3e55a78051.png">
   
   <img width="308" alt="Captura de tela 2023-03-02 185911" src="https://user-images.githubusercontent.com/26011999/222568199-00eb8a96-6bd3-45ff-8b84-c9f374d99c91.png">
-
-
 </span>
+
 ## Getting Started
 
 To get started, clone the repository and open the project in your favorite IDE.
