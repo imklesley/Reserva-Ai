@@ -1,6 +1,6 @@
 # Reserva Aí! Login page
 
-Reserva Aí! is a mobile application that allows users to make reservations for different services in their city. This project is a flutter project for the responsive login page of the application. The application can be tested at the link https://reservaai-app.web.app/#/welcome .
+Reserva Aí! is an application that allows users to make reservations for different services in their city. This project is a flutter project for the responsive login page of the application. The application can be tested at the link https://reservaai-app.web.app/#/welcome .
 
 <img width="1913" alt="Captura de tela 2023-03-02 185359" src="https://user-images.githubusercontent.com/26011999/222567338-41186fc3-7811-4bea-bf72-5dfbf4b5e1b4.png">
 <img width="1907" alt="Captura de tela 2023-03-02 185532" src="https://user-images.githubusercontent.com/26011999/222567633-3343bd01-e4c2-487f-9564-afc3a59e8d6b.png">
